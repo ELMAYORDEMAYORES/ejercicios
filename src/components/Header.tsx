@@ -1,13 +1,14 @@
-import { useLocalStorage } from '../hooks/useLocalStorage'
 import { workoutData } from '../data/workoutData'
 import type { ExerciseData, WeightData } from '../types'
 
+interface Props {
+  checked: ExerciseData
+  weights: WeightData
+}
+
 const weekLabels = ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4']
 
-export default function Header() {
-  const [checked] = useLocalStorage<ExerciseData>('ejercicios-checked', {})
-  const [weights] = useLocalStorage<WeightData>('ejercicios-weights', {})
-
+export default function Header({ checked, weights }: Props) {
   const totalExercises = workoutData.reduce(
     (sum, week) => sum + week.days.reduce((s, d) => s + d.exercises.length, 0),
     0,
