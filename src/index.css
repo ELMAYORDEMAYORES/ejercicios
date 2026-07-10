@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-violet-500: #a855f7;
+  --color-violet-400: #c084fc;
+  --color-violet-300: #d8b4fe;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: #020617;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(88, 28, 135, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 90% 90%, rgba(168, 85, 247, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 30% at 10% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Selection */
+::selection {
+  background: rgba(168, 85, 247, 0.25);
+  color: #f1f5f9;
+}
+
+/* Focus visible ring */
+:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.5);
+  outline-offset: 2px;
+}
+
+/* Neumorphic card style utility */
+.neumorphic {
+  box-shadow:
+    4px 4px 8px rgba(0, 0, 0, 0.5),
+    -1px -1px 4px rgba(255, 255, 255, 0.03);
+}
