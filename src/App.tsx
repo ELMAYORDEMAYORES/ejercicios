@@ -84,7 +84,7 @@ function App() {
         })}
       </div>
 
-      <Footer />
+      <Footer onReset={() => { setChecked({}); setWeights({}) }} />
     </div>
   )
 }
