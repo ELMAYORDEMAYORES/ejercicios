@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="mx-auto min-h-screen max-w-5xl px-4 py-6 sm:px-6 sm:py-10">
-      <Header />
+      <Header checked={checked} weights={weights} />
 
       <InfoPanel />
 
