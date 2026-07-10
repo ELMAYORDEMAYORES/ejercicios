@@ -8,6 +8,7 @@ import SummaryTable from './components/SummaryTable'
 import WeekAccordion from './components/WeekAccordion'
 import DayTabs from './components/DayTabs'
 import ExerciseTable from './components/ExerciseTable'
+import NutritionAccordion from './components/NutritionAccordion'
 import Footer from './components/Footer'
 
 function App() {
@@ -83,6 +84,8 @@ function App() {
           )
         })}
       </div>
+
+      <NutritionAccordion />
 
       <Footer onReset={() => { setChecked({}); setWeights({}) }} />
     </div>
